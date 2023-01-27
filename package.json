@@ -8,5 +8,9 @@
     "method-override": "^3.0.0",
     "mongodb": "^4.13.0",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "homepage": "https://KocherlaSahith.github.io/cbitportal.github.io",
+    "gh-pages": "^5.0.0"
   }
 }
