@@ -1,0 +1,21 @@
+<% layout('layouts/lboilerplate')%>
+<style>
+    #box{
+        border: 10px solid #66b3ff;
+    }
+    body{
+        font-family: 'Times New Roman', Times, serif;
+    }
+</style>
+<% for (let campground of lst){%>
+    <div id="box">
+    <h2>
+        <form action="/unsend_message/<%= campground._id %>/<%= campground.s_name %>" method="get">
+        <%= campground.message %>
+        <h2>Mentor name :  <%= campground.m_name %></h2>
+        <button class="btn btn-info">Unsend message</button>
+    </div>
+        <br>
+    </h2>
+</form>
+    <% }%>

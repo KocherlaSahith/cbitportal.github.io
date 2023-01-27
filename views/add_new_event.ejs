@@ -1,0 +1,25 @@
+<% layout('layouts/eaboilerplate')%>
+<form action="/adding_new" method="post">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Event name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter event name" name="ename">
+    </div>
+    <br>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Event description</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Event description" name="edesc">
+    </div>
+    <br>
+    
+    <div class="form-group">
+        <label for="exampleInputPassword1">Image URL</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter the image URL" name="eimg">
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Hosted by</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Event hosted by" name="ehost">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

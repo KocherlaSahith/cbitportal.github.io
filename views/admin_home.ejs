@@ -1,0 +1,38 @@
+<% layout('layouts/lboilerplate')%>
+<style>
+      #box{
+      width: auto;
+      border: 15px solid skyblue;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 10px;
+    }
+    body{
+        font-family: 'Times New Roman', Times, serif;
+    }
+</style>
+<h2>Welcome <%= lst3[0].m_name %>!</h2>
+<% for (let campground of lst3){%> 
+<% for (let campground2 of higher){%>
+    <div id="box"> 
+        <h3>STUDENT NAME : <%= campground.s_name %></h3>
+        <h3>ISSUE        :<%= campground.message %></h3>
+<form action="/send_message/<%= campground.s_name %>/<%=campground.m_name%>/" method="post">
+    <br>
+    <textarea id="textbox" name="response" rows="4" cols="100">
+    </textarea>
+    <button class="btn btn-info" style="position: relative;left: 500px; "> Send Message</button>
+</form>
+<form action="/esculate/<%= campground.s_name %>/<%=campground.m_name%>/<%=campground2.name%>/<%=campground.message%>" method="get">
+    <label for ="esbt">Not sure? Esculate to HOD </label>
+    <button class="btn btn-info" name="esbt">Esculate</button>
+</form>     
+<% }%> 
+<form action="/solved/<%=campground.s_name%>/<%=campground.m_name%>" method="get">
+    <label for="dbt">Delete this particular issue </label>        
+    <button class="btn btn-info" name="dbt">Delete</button>
+    <br>
+    </form>
+</div>
+
+<% }%>

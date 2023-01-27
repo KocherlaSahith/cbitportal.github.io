@@ -1,0 +1,92 @@
+<% layout('layouts/boilerplate')%>
+<style>
+    #box{
+      width: 600px;
+      border: 15px solid skyblue;
+      padding: 50px;
+      margin: 20px;
+      position: relative;
+      left: 370px;
+      border-radius: 20px;
+    }
+    body{
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80");
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family:'Times New Roman', Times, serif;
+        font-weight: bolder;
+        color: white;
+    }
+    </style>
+<div class="row">
+    <h2 class="text-center">Sign up / Register</h2>
+    <div class="col-6 offset-3" >
+        <form action="/signup" method="post" novalidate class="validated-form">
+            <div class="mb-3">
+                <label class="form-label" for="Username"><b>Username</b></label>
+                <input class="form-control" type="text" id="Username" name="name"
+                    placeholder="Enter your Username" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="email"><b>Email</b></label>
+                <input class="form-control" type="email" id="email" name="email"
+                    placeholder="Enter your email" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="Password"><b>Password</b></label>
+                <input class="form-control" type="password" id="Password" name="password"
+                    placeholder="Password" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <label for="type">Choose what describes you :</label>
+
+            <select name="type" id="cars" style="width: 170px;">
+            <option value="student">Student</option>
+            <option value="mentor">Mentor / Class Teacher</option>
+            <option value="hod">HOD</option>
+            </select>
+            <br>
+            <label for="year">Year of study :</label>
+            <select name="year" id="cars" style="width: 200px;">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            </select>
+            <br>
+            <label for="branch">Select your Branch:</label>
+
+            <select name="branch" id="cars" style="width: 200px;">
+            <option value="IT">IT</option>
+            <option value="CSE">CSE</option>
+            <option value="ECE">ECE</option>
+            <option value="EEE">EEE</option>
+            </select>
+            <br>
+            <label for="section">Select your section:</label>
+
+            <select name="section" id="cars" style="width: 200px;">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            </select>
+            <br>
+            <div class="mb-3">
+                <button class="btn btn-info">Sign up</button>
+            </div>
+
+        </form>
+        
+
+
+    </div>
+</div>
